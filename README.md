@@ -1,2 +1,3 @@
-# assignments-PIAIC
-Assignments of PIAIC Web 3.0 Class
+# Node Practice Projects
+
+Assignments for PIAIC Web 3.0 Classes
