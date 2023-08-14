@@ -4,5 +4,4 @@ The TypeScript console app is used to convert currencies: the users enter a cert
 
 While developing the app, the beginners can master variables, algorithms, loops, if statements, and other TypeScript concepts.
 
-Create a GitHub repository for the project and submit its URL in the project submission form. 
-
+Create a GitHub repository for the project and submit its URL in the project submission form.

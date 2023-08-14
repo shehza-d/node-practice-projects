@@ -6,7 +6,7 @@ import inquirer from "inquirer";
 // import chalk from 'chalk';
 // import chalk from 'chalk';
 
-console.log("Shehzad Calculator")
+console.log("Shehzad Calculator");
 
 const startFunction = async () => {
   const rainbow = chalkAnimation.rainbow("Let's start Calculating");

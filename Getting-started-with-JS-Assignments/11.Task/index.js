@@ -1,5 +1,14 @@
-const friends = ["Okasha","Sufiyan","Saad","Abdul Samad","Jaffar",
-                 "Zain","Rehan","Anas Ali Abbasi","Namat",];
+const friends = [
+  "Okasha",
+  "Sufiyan",
+  "Saad",
+  "Abdul Samad",
+  "Jaffar",
+  "Zain",
+  "Rehan",
+  "Anas Ali Abbasi",
+  "Namat",
+];
 
 friends.sort();
 

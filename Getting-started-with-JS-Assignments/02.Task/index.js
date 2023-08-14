@@ -1,4 +1,4 @@
 const NAME = "SHEHZAD";
 
 console.log(`“Hello ${NAME},
-would you like to learn some JavaScript today?”`)
+would you like to learn some JavaScript today?”`);
