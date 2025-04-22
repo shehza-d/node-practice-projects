@@ -4,69 +4,36 @@ import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
 import inquirer from "inquirer";
 // import chalk from 'chalk';
-// import chalk from 'chalk';
 
-console.log("Shehzad Calculator");
+console.log(`| Guess a Number between 1 to 10 |`);
 
 const startFunction = async () => {
-  const rainbow = chalkAnimation.rainbow("Let's start Calculating");
+  // const rainbow = chalkAnimation.rainbow("Let's start Calculating");
   //   setTimeout(() => {
   //     rainbow.stop();
   //   }, 2000);
-  console.log(` _____________________
-                |  _________________  |
-                | | SHEHZAD      | |`);
 
-  const answere = await inquirer.prompt([
-    {
-      type: "list",
-      name: "operator",
-      message: "Which operations do you want perform?\n",
-      choices: ["Add", "Subract", "Multiply", "Divide"],
-    },
-    {
-      type: "number",
-      name: "num1",
-      message: "Enter first Number = ",
-    },
-    {
-      type: "number",
-      name: "num2",
-      message: "Enter second Number = ",
-    },
-  ]);
-  //   console.log(answere);
-  if (answere.operator === "Add") {
-    console.log(
-      chalk.green(
-        `${answere.num1} + ${answere.num2} = ${answere.num1 + answere.num2}`
-      )
-    );
-  } else if (answere.operator === "Subract") {
-    console.log(
-      chalk.red(
-        `${answere.num1} - ${answere.num2} = ${answere.num1 - answere.num2}`
-      )
-    );
-  } else if (answere.operator === "Multiply") {
-    console.log(
-      chalk.yellow(
-        `${answere.num1} x ${answere.num2} = ${answere.num1 * answere.num2}`
-      )
-    );
-  } else if (answere.operator === "Divide") {
-    console.log(
-      chalk.bgGreenBright(
-        `${answere.num1} / ${answere.num2} = ${answere.num1 / answere.num2}`
-      )
-    );
-  } else {
+  const { num } = await inquirer.prompt({
+    type: "number",
+    name: "num",
+    message: "Enter a Number = ",
+  });
+
+  const randomNumber = Math.round(Math.random() * 10);
+  console.log("🚀 ~ file: randomNumber:", randomNumber);
+
+  if (num !== randomNumber) console.log("you have gussed wrong number");
+  else if (num === randomNumber) console.log("you have gussed wrong number");
+  // else if (num === randomNumber) console.log("");
+  else {
     console.log("ERROR");
   }
 };
+
+let restart;
 do {
   await startFunction();
-  var restart = await inquirer.prompt({
+  restart = await inquirer.prompt({
     type: "input",
     name: "restart",
     message: "Do you want to restart? Yes or No",
@@ -75,11 +42,3 @@ do {
   restart.restart.toLowerCase() === "yes" ||
   restart.restart.toLowerCase() === "y"
 );
-
-// figlet("Shehzad", async(err, data) => {
-//     if (err) {
-//       console.log("Something went wrong...", err);
-//       return;
-//     }
-//    await console.log(data);
-//   });
